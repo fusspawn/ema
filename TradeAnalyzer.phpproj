@@ -1,0 +1,1375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>TradeAnalyzer</Name>
+    <ProjectGuid>4ad5052e-a0d4-45f1-9f56-9ca6609d5976</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TradeAnalyzer</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>TradeAnalyzer</AssemblyName>
+    <IISProjectUrl>http://localhost:13851/</IISProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="application\config\autoload.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\config.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\constants.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\database.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\doctypes.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\foreign_chars.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\hooks.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\migration.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\mimes.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\profiler.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\routes.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\smileys.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\config\user_agents.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\controllers\bookkeeping.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\controllers\reports.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\controllers\tasks.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\controllers\welcome.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\core\MY_Loader.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\errors\error_404.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\errors\error_db.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\errors\error_general.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\errors\error_php.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\models\ci_stats.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\models\finance.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\models\item_ids.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\footer.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\header.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\navbar.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\reports\create.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\reports\system_report.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\tasks\tasks.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\views\welcome_message.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="index.php" />
+    <Compile Include="sparks\curl\1.3.0\config\autoload.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\curl\1.3.0\libraries\Curl.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\config\autoload.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\config\fire_log.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\helpers\fire_log_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\helpers\spark_url_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\language\english\fire_log_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\libraries\Fire_log.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sparks\fire_log\0.7.0\views\fire_log_view.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Benchmark.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\CodeIgniter.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Common.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Config.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Controller.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Exceptions.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Hooks.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Input.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Loader.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Model.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Output.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Router.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Security.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\URI.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\core\Utf8.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_active_rec.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_cache.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\DB_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\cubrid\cubrid_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\cubrid\cubrid_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\cubrid\cubrid_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\cubrid\cubrid_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mssql\mssql_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mssql\mssql_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mssql\mssql_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mssql\mssql_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysqli\mysqli_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysqli\mysqli_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysqli\mysqli_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysqli\mysqli_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysql\mysql_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysql\mysql_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysql\mysql_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\mysql\mysql_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\oci8\oci8_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\oci8\oci8_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\oci8\oci8_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\oci8\oci8_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\odbc\odbc_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\odbc\odbc_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\odbc\odbc_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\odbc\odbc_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\pdo\pdo_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\pdo\pdo_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\pdo\pdo_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\pdo\pdo_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\postgre\postgre_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\postgre\postgre_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\postgre\postgre_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\postgre\postgre_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlite\sqlite_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlite\sqlite_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlite\sqlite_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlite\sqlite_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlsrv\sqlsrv_driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlsrv\sqlsrv_forge.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlsrv\sqlsrv_result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\database\drivers\sqlsrv\sqlsrv_utility.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\array_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\captcha_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\cookie_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\date_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\directory_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\download_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\email_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\file_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\form_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\html_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\inflector_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\language_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\number_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\path_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\security_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\smiley_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\string_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\text_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\typography_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\url_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\helpers\xml_helper.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\calendar_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\date_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\db_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\email_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\form_validation_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\ftp_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\imglib_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\migration_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\number_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\profiler_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\unit_test_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\language\english\upload_lang.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cache\Cache.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cache\drivers\Cache_apc.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cache\drivers\Cache_dummy.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cache\drivers\Cache_file.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cache\drivers\Cache_memcached.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Calendar.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Cart.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Driver.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Email.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Encrypt.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Form_validation.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Ftp.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Image_lib.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Javascript.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\javascript\Jquery.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Log.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Migration.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Pagination.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Parser.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Profiler.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Session.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Sha1.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Table.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Trackback.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Typography.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Unit_test.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Upload.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\User_agent.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Xmlrpc.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Xmlrpcs.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="system\libraries\Zip.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Access\CanCheck.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Access\NullCheck.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Access\StaticCheck.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Archive\CanArchive.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Archive\FileStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Archive\NullStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\CanCache.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\FileStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\ForcedFileStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\HashedNameFileStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\MemcacheStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\NullStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\CanConvertToArray.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\Config.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\Container.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\Element.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\Result.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\RowSet.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\RowSetRow.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\AccessException.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\APIException.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\ConnectionException.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\HTTPException.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\PhealException.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Fetcher\CanFetch.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Fetcher\Curl.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Fetcher\File.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Log\CanLog.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Log\FileStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Log\NullStorage.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\3rdpartyeve\phealng\lib\Pheal\Pheal.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\autoload.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\composer\autoload_classmap.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\composer\autoload_namespaces.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\composer\autoload_real.php">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="vendor\composer\ClassLoader.php">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application\.htaccess">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\cache\.htaccess">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\cache\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\config\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\controllers\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\core\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\errors\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\helpers\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\hooks\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\language\english\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\libraries\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\logs\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\models\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\models\typeid.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\third_party\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="application\views\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="composer.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparks\curl\1.3.0\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparks\curl\1.3.0\spark.info">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparks\fire_log\0.7.0\README.markdown">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparks\fire_log\0.7.0\spark.info">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparks\fire_log\0.7.0\views\styles.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="static\jquery.tablesorter.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="static\site_base.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\.htaccess">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\core\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\cubrid\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\mssql\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\mysqli\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\mysql\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\oci8\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\odbc\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\pdo\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\postgre\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\sqlite\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\drivers\sqlsrv\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\database\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\fonts\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\fonts\texb.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\helpers\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\language\english\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\language\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="system\libraries\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\changelog.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\active_record.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\caching.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\call_function.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\configuration.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\connecting.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\examples.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\fields.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\forge.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\helpers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\queries.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\results.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\table_data.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\transactions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\database\utilities.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\doc_style\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\doc_style\template.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\alternative_php.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\ancillary_classes.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\autoloader.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\caching.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\cli.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\common_functions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\controllers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\core_classes.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\creating_drivers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\creating_libraries.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\credits.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\drivers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\environments.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\errors.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\helpers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\hooks.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\libraries.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\managing_apps.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\models.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\profiling.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\quick_reference.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\requirements.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\reserved_names.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\routing.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\security.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\styleguide.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\urls.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\general\views.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\array_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\captcha_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\cookie_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\date_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\directory_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\download_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\email_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\file_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\form_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\html_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\inflector_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\language_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\number_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\path_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\security_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\smiley_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\string_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\text_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\typography_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\url_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\helpers\xml_helper.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\appflowchart.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\arrow.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\ci_logo.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\ci_logo_flame.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\ci_quick_ref.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\codeigniter_1.7.1_helper_reference.pdf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\codeigniter_1.7.1_helper_reference.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\codeigniter_1.7.1_library_reference.pdf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\codeigniter_1.7.1_library_reference.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\file.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\folder.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\nav_bg_darker.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\nav_separator_darker.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\nav_toggle_darker.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\reactor-bullet.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\smile.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\images\transparent.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\downloads.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\troubleshooting.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_120.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_130.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_131.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_132.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_133.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_140.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_141.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_150.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_152.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_153.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_154.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_160.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_161.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_162.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_163.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_170.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_171.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_172.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_200.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_201.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_202.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_203.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_210.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_211.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_212.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_213.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_214.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrade_b11.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\installation\upgrading.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\benchmark.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\caching.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\calendar.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\cart.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\config.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\email.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\encryption.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\file_uploading.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\form_validation.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\ftp.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\image_lib.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\input.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\javascript.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\language.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\loader.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\migration.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\output.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\pagination.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\parser.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\security.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\sessions.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\table.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\trackback.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\typography.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\unit_testing.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\uri.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\user_agent.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\xmlrpc.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\libraries\zip.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\license.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\nav\hacks.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\nav\moo.fx.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\nav\nav.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\nav\prototype.lite.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\nav\user_guide_menu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\appflow.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\at_a_glance.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\cheatsheets.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\features.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\getting_started.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\goals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\overview\mvc.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\toc.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\conclusion.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\create_news_items.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\hard_coded_pages.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\news_section.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\tutorial\static_pages.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="user_guide\userguide.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\3rdpartyeve\phealng\.gitignore">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\3rdpartyeve\phealng\composer.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\3rdpartyeve\phealng\LICENSE.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\3rdpartyeve\phealng\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="vendor\composer\installed.json">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="application\" />
+    <Folder Include="application\cache\" />
+    <Folder Include="application\config\" />
+    <Folder Include="application\controllers\" />
+    <Folder Include="application\core\" />
+    <Folder Include="application\errors\" />
+    <Folder Include="application\helpers\" />
+    <Folder Include="application\hooks\" />
+    <Folder Include="application\language\" />
+    <Folder Include="application\language\english\" />
+    <Folder Include="application\libraries\" />
+    <Folder Include="application\logs\" />
+    <Folder Include="application\models\" />
+    <Folder Include="application\sparks\" />
+    <Folder Include="application\sparks\curl\" />
+    <Folder Include="application\third_party\" />
+    <Folder Include="application\views\" />
+    <Folder Include="application\views\tasks" />
+    <Folder Include="E:\wamp\www\application\views\reports" />
+    <Folder Include="sparks\" />
+    <Folder Include="sparks\curl\" />
+    <Folder Include="sparks\curl\1.3.0\" />
+    <Folder Include="sparks\curl\1.3.0\config\" />
+    <Folder Include="sparks\curl\1.3.0\libraries\" />
+    <Folder Include="sparks\fire_log\" />
+    <Folder Include="sparks\fire_log\0.7.0\" />
+    <Folder Include="sparks\fire_log\0.7.0\config\" />
+    <Folder Include="sparks\fire_log\0.7.0\helpers\" />
+    <Folder Include="sparks\fire_log\0.7.0\language\" />
+    <Folder Include="sparks\fire_log\0.7.0\language\english\" />
+    <Folder Include="sparks\fire_log\0.7.0\libraries\" />
+    <Folder Include="sparks\fire_log\0.7.0\views\" />
+    <Folder Include="static" />
+    <Folder Include="system\" />
+    <Folder Include="system\core\" />
+    <Folder Include="system\database\" />
+    <Folder Include="system\database\drivers\" />
+    <Folder Include="system\database\drivers\cubrid\" />
+    <Folder Include="system\database\drivers\mssql\" />
+    <Folder Include="system\database\drivers\mysqli\" />
+    <Folder Include="system\database\drivers\mysql\" />
+    <Folder Include="system\database\drivers\oci8\" />
+    <Folder Include="system\database\drivers\odbc\" />
+    <Folder Include="system\database\drivers\pdo\" />
+    <Folder Include="system\database\drivers\postgre\" />
+    <Folder Include="system\database\drivers\sqlite\" />
+    <Folder Include="system\database\drivers\sqlsrv\" />
+    <Folder Include="system\fonts\" />
+    <Folder Include="system\helpers\" />
+    <Folder Include="system\language\" />
+    <Folder Include="system\language\english\" />
+    <Folder Include="system\libraries\" />
+    <Folder Include="system\libraries\Cache\" />
+    <Folder Include="system\libraries\Cache\drivers\" />
+    <Folder Include="system\libraries\javascript\" />
+    <Folder Include="user_guide\" />
+    <Folder Include="user_guide\database\" />
+    <Folder Include="user_guide\doc_style\" />
+    <Folder Include="user_guide\general\" />
+    <Folder Include="user_guide\helpers\" />
+    <Folder Include="user_guide\images\" />
+    <Folder Include="user_guide\installation\" />
+    <Folder Include="user_guide\libraries\" />
+    <Folder Include="user_guide\nav\" />
+    <Folder Include="user_guide\overview\" />
+    <Folder Include="user_guide\tutorial\" />
+    <Folder Include="vendor\" />
+    <Folder Include="vendor\3rdpartyeve\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Access\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Archive\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Cache\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Core\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Exceptions\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Fetcher\" />
+    <Folder Include="vendor\3rdpartyeve\phealng\lib\Pheal\Log\" />
+    <Folder Include="vendor\composer\" />
+  </ItemGroup>
+</Project>
